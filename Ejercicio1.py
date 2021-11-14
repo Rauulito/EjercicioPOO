@@ -1,4 +1,4 @@
-class libro():
+class libro:
 
     #Creamos el constructor
     def __init__(self, nombre,autor,editorial,precioBase, genero, nPaginas):
