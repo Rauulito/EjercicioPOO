@@ -20,5 +20,14 @@ class CuentaBanacaria():
 
     #Metodo para sacar
     def sacarDinero(self, dineroSacado):
-        if(getSaldo> dineroSacado):
+        if(self.getSaldo()> dineroSacado):
             self.saldo= self.saldo - dineroSacado
+
+    #Metodo para meter
+    def sacarDinero(self, dineroMetido):
+        self.saldo= self.saldo + dineroMetido
+
+    #Metodo para transferir
+    def transferirDinero(self, dinero,cuantaTrasnfiere, cuantaTransferida):
+        if(self.getSaldo()> dinero):
+            self.cuentaTrasfiere= self.cuentaTrasfiere - dinero
