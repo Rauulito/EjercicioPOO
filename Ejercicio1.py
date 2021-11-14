@@ -2,15 +2,39 @@ class Libro():
 
 
     #Creamos el constructor
-    def __init__(self, nombre,autor,editorial,precioBase, genero, nPaginas):
-        self.nombre = nombre
+    def __init__(self, titulo,autor,editorial,precioBase, genero, nPaginas):
+        self.titulo = titulo
         self.autor= autor
         self.editorial= editorial
         self.precioBase= precioBase
         self.genero= genero
         self.nPaginas= nPaginas
 
-
+    #Metodos get y set
+    def setTitulo(self,titulo):
+        self.titulo= titulo
+    def setAutor(self,autor):
+        self.autor= autor
+    def setEditorial(self,editorial):
+        self.editorial= editorial
+    def setPrecioBase(self,precioBase):
+        self.precioBase= precioBase
+    def setGenero(self,genero):
+        self.genero= genero
+    def setNPaginas(self,nPaginas):
+        self.nPaginas= nPaginas
+    def getTitulo(self,titulo):
+        return self.titulo
+    def getAutor(self,autor):
+        return self.autor
+    def getEditorial(self,editorial):
+        return self.editorial
+    def getPrecioBase(self,precioBase):
+        return self.precioBase
+    def getGenero(self,genero):
+        return self.genero
+    def getNPaginas(self,nPaginas):
+        return self.nPaginas
 
 libro =  Libro("El Palomo","Carlos Rodriguez","Edelvives","180","Aventuras","330")
-print(libro.nombre,libro.autor, libro.editorial,libro.precioBase,libro.genero,libro.nPaginas)
+print("Titulo:"+libro.titulo,"Autor:"+libro.autor, "Editorial:"+libro.editorial,"Precio base:"+libro.precioBase,"Género:"+libro.genero,"Número de páginas:"+libro.nPaginas)
