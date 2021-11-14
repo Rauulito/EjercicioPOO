@@ -11,3 +11,4 @@ class libro():
 
     #Probamos que funciona
     libro= libro("El Palomo","Carlos Rodriguez","Edelvives","180","Aventuras","330")
+    print(libro.nombre,libro.autor, libro.editorial,libro.precioBase,libro.genero,libro.nPaginas)
