@@ -20,14 +20,18 @@ class CuentaBanacaria():
 
     #Metodo para sacar
     def sacarDinero(self, dineroSacado):
-        if(self.getSaldo()> dineroSacado):
+        if(self.getSaldo()>= dineroSacado):
             self.saldo= self.saldo - dineroSacado
-
+        else:
+            print("No hay suficiente dinero en la cuenta")
     #Metodo para meter
-    def sacarDinero(self, dineroMetido):
+    def meterDinero(self, dineroMetido):
         self.saldo= self.saldo + dineroMetido
 
     #Metodo para transferir
-    def transferirDinero(self, dinero,cuantaTrasnfiere, cuantaTransferida):
-        if(self.getSaldo()> dinero):
-            self.cuentaTrasfiere= self.cuentaTrasfiere - dinero
+    def transferirDinero(self, dinero,cuantaTransferida):
+        if(self.getSaldo()>= dinero):
+            self.sacarDinero(dinero)
+            cuantaTransferida.meterDinero(dinero)
+        else:
+            print("No hay dinero suficiente")
